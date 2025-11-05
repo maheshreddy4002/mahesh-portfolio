@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #b3b4b5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif
+}
+.logo:hover {
+  color: #007bff;
+}
+
+nav a {
+  margin-left: 35px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #007BFF;
+}
+
+/* Education Section */
+.education-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+}
+
+/* Title */
+.edu-title {
+  font-size: 3rem;
+  color: #222;
+  margin-bottom: 45px;
+  transition: color 0.3s;
+  letter-spacing: 2.5px;
+}
+.edu-title:hover {
+  color: #007bff;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  max-width: 1080px;
+  padding: 22px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  right: 6%;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff 0%, #00c6fb 100%);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Timeline Blocks */
+.timeline-block {
+  position: relative;
+  background: #fff;
+  border-radius: 13px;
+  padding: 28px 19px 22px 19px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 19px rgba(0,0,0,0.14);
+  z-index: 2;
+  transition: transform 0.4s, background 0.3s, box-shadow 0.3s, opacity 0.6s;
+  border: 1.5px solid #e4e6eb;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.timeline-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-block:hover {
+  transform: translateY(-12px) scale(1.03);
+  background: #eaf6ff;
+  box-shadow: 0 12px 32px #007bff20;
+  border-color: #007bff;
+}
+
+.timeline-block.current {
+  border: 2px solid #007bff;
+  box-shadow: 0 8px 22px #007bff23;
+}
+
+/* Dot Accent */
+.dot {
+  width: 17px;
+  height: 17px;
+  background: linear-gradient(135deg, #007bff 70%, #00c6fb 100%);
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 2px 13px #007bff33;
+}
+
+/* Block Content */
+.timeline-block h3 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 7px;
+  letter-spacing: 1.2px;
+}
+.timeline-block h2 {
+  font-size: 1.36rem;
+  color: #222;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+.timeline-block p {
+  font-size: 1.01rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* Achievement Badge */
+.edu-badge {
+  display: inline-block;
+  font-size: 1.07em;
+  font-weight: bold;
+  color: #007bff;
+  background: #eaf3ff;
+  border-radius: 8px;
+  padding: 3px 13px 3px 8px;
+  margin: 6px 0 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.edu-badge:hover {
+  background: #d2e9ff;
+}
+
+.edu-badge i {
+  margin-right: 7px;
+  color: #007bff;
+}
+
+/* Tooltip Styling */
+.edu-badge .tooltip {
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  padding: 7px 16px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.97em;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px #33333310;
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.edu-badge.show-tip .tooltip {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 99%;
+    max-width: 540px;
+    min-width: 0;
+    padding: 0;
+  }
+  .timeline::before { display: none; }
+  .timeline-block { width: 90vw; margin-bottom: 38px; }
+  .dot { margin: 0 auto 10px auto; }
+}
+
+

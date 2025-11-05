@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #b3b4b5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif
+}
+.logo:hover {
+  color: #007bff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 35px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
+/* Dropdown Container */
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* ABOUT Link */
+.dropbtn {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: #007BFF;
+}
+
+/* Dropdown Content (transparent & blended) */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent; /* No box */
+  min-width: 100px;
+  padding-top: 8px;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* EDUCATION Link */
+.dropdown-content a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 0;
+  text-transform: uppercase;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  color: #007BFF;
+}
+
+
+/* About Section Layout */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  gap: 50px;
+  padding: 0 40px;
+}
+
+/* Image on left */
+.about-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Text on right */
+.about-content {
+  max-width: 600px;
+  align-self: flex-start;
+  padding-right: 20px;
+  text-align: left;
+}
+
+/* Heading with colored "ABOUT" and "ME" */
+.heading {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-word {
+  color: #007BFF;
+}
+
+.me-word {
+  color: #000000;
+}
+
+.heading:hover .about-word {
+  color: #000000;
+}
+
+.heading:hover .me-word {
+  color: #007BFF;
+}
+
+/* Paragraph styling */
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.button2 {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.button2:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .dropdown-content {
+    left: 0;
+    right: auto;
+  }
+}
+

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #b3b4b5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif
+}
+.logo:hover {
+  color: #007bff;
+}
+
+nav a {
+  margin-left: 35px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #007BFF;
+}
+  
+
+/* Main Contact Section Alignment */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 52px;
+  min-height: 70vh;
+}
+
+/* Animated entrance */
+.animated-fadeIn {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Contact Intro */
+.contact-intro {
+  font-size: 2.1rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 26px;
+  color: #191919;
+  letter-spacing: 1px;
+}
+
+.contact-intro .reach {
+  color: #007BFF;
+}
+.contact-intro .out {
+  color: #191919;
+}
+
+.contact-intro:hover .reach {
+  color: #191919;
+}
+.contact-intro:hover .out {
+  color: #007BFF;
+}
+
+/* White, glassy card for the contacts */
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 20px -3px #b3b7bc;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 270px;
+  width: 90vw;
+}
+
+/* Blue contact boxes */
+.contact-box {
+  width: 170px;
+  background: #007BFF;    /* Black/dark shade for strong contrast */
+  color: #fff;         /* White text */
+  padding: 10px 9px;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 0;    /* Use .contact-info-card gap instead */
+  box-shadow: 0 2px 14px 0 #bbbbbb33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  border: 1.2px solid #e1e3ea;
+}
+
+.contact-box:hover {
+  background: #0056b3;    /* Slightly lighter black on hover */
+  transform: scale(1.045) translateY(-2px);
+}
+
+.contact-box i {
+  font-size: 1.08rem;  /* Smaller icon */
+  margin-bottom: 4px;
+}
+
+.contact-details {
+  display: block;
+  font-size: 0.81rem;
+  color: #d6edff;  /* Pale gray for detail text */
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  background: #f7f8fa;
+  font-size: 0.92rem;
+  border-top: 1px solid #e1e1e1;
+  padding: 10px 0 6px 0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 8px #e0e3e8;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .contact-intro {
+    font-size: 1.1rem;
+  }
+  .contact-info-card {
+    padding: 16px 5vw;
+    gap: 14px;
+    min-width: 120px;
+  }
+  .contact-box {
+    width: 90vw;
+    font-size: 0.93rem;
+  }
+}
+
