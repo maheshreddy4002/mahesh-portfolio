@@ -174,13 +174,37 @@ nav a:hover {
   }
 }
 
-/* Small device fixes */
-@media (max-width: 500px) {
-  header { flex-direction: column; gap: 6px; padding-bottom: 10px; }
-  .main-content { padding: 8px 2px; }
-  .image-container { width: 65vw; height: 65vw; }
-  .typing { font-size: 1rem; }
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .text-section {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .image-container {
+    width: 70vw;
+    height: 70vw;
+    max-width: 280px;
+    max-height: 280px;
+    margin: 20px auto;
+  }
+  
+  .social-icons {
+    gap: 25px;
+    bottom: 15px;
+  }
+  
+  .social-icons a {
+    font-size: 28px;
+  }
 }
+
+
 
 
 
