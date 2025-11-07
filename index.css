@@ -92,11 +92,52 @@ body, html {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-/* Responsive mobile styles */
-@media (max-width: 500px) {
-  .logo-box { width: 82vw; height: 17vw; }
-  .infinity-bg { width: 73vw; height: 32vw; top: 4vw; }
-  .initials { font-size: 3.4rem; letter-spacing: 6px; margin-top: 19px;}
-  .fullname { font-size: 1.3rem; margin-top: 10px; letter-spacing: 3px;}
+/* Mobile Fix for Opening Page */
+@media (max-width: 768px) {
+  .logo-box {
+    width: 90vw;
+    height: auto;
+    padding: 20px 0;
+  }
+  
+  .infinity-bg {
+    width: 60vw;
+    height: 25vw;
+    top: 5px;
+  }
+  
+  .initials {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    margin-top: 30px;
+  }
+  
+  .fullname {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    letter-spacing: 4px;
+  }
 }
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .initials {
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    margin-top: 25px;
+  }
+  
+  .fullname {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    letter-spacing: 3px;
+  }
+  
+  .infinity-bg {
+    width: 55vw;
+    height: 22vw;
+  }
+}
+
+
 
